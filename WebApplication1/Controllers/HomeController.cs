@@ -29,7 +29,7 @@ namespace WebApplication1.Controllers
             using (var connection = _dbconnection.Connection)
             {
 
-                var data = connection.Query<>("select * from [Partner]"); // fetch all data from the table
+                var data = connection.Query<Partner>("select * from [Partner]"); // fetch all data from the table
                 return View();
             }
         }
@@ -53,9 +53,7 @@ namespace WebApplication1.Controllers
         {
             using (var connection = _dbconnection.Connection)
             {
-                //***
-                //***  Get user info from the table based on ID
-                //***
+                // Get user info from the table based on ID
                 var data = connection.QueryFirstOrDefault<Partner>("select * from [Partner] where Id = @id", new { id = id });
                 return View(data);
             }
