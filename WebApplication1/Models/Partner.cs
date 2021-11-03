@@ -12,11 +12,11 @@ namespace Dapper.Models
     {
 
         [Key]
-        [Column("PartnerTypeId")]
+        [Column("Id")]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Display(Name = "Partner Type ID")]
-        public virtual int PartnerTypeId { get; set; }
+        [Display(Name = "ID")]
+        public virtual int Id { get; set; }
 
 
         [Column("FirstName")]
@@ -46,6 +46,11 @@ namespace Dapper.Models
         [Required]
         [Display(Name = "Croatian PIN")]
         public virtual int CroatianPIN { get; set; }
+
+        [Column("PartnerTypeId")]
+        [Required]
+        [Display(Name = "Partner Type ID")]
+        public virtual int PartnerTypeId { get; set; }
 
 
         [Column("CreatedAtUtc")]
