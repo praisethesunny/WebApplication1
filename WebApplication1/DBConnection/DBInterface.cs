@@ -11,7 +11,7 @@ namespace WebApplication1.DBConnection
 
         void InitialDatabase();
 
-        DbConnection Connection { get;  }
+        DbConnection Connection { get;}
 
     }
 }

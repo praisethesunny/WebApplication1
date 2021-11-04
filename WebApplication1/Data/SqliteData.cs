@@ -12,7 +12,7 @@ using System.IO;
 
 namespace WebApplication1.Data
 {
-    public class SqliteData : DBInterface
+    public class SqliteData: DBInterface
     {
         string SqliteFilePath => Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "UserDb.sqlite");
 
@@ -20,7 +20,7 @@ namespace WebApplication1.Data
         {
         }
 
-        public void SeedDatabase()
+        public void InitialDatabase()
         {
 
             if (!File.Exists(SqliteFilePath))
